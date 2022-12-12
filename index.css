@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url(./images/subtle-prism.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+h1{
+    font-size: 45px;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
+    grid-gap: 2rem;
+    perspective: 800px; 
+    
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgb(0, 0, 2) 0px 5px 15px;
+}
+
+.face,
+.back {
+    width: 100%;
+    color: #4FE;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    object-fit: cover;
+}
+.back{
+    background-color: #fff;
+    background-image: url("./images/dinar_logo.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    backface-visibility: hidden;   
+}
+.toggleCard{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    section{
+        grid-template-columns: repeat(4, 18vw);
+        grid-template-rows: repeat(4, 18vw);
+        grid-gap: 4vw;
+    }
+}
