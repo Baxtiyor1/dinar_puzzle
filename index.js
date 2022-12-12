@@ -8,22 +8,22 @@ playerLivesCount.textContent = playerLives;
 
 
 const getData = () => [
-    { imgSrc: "./images/aristokrat.png", name: "aristokrat" },
-    { imgSrc: "./images/barbekyu.png", name: "barbekyu" },
-    { imgSrc: "./images/doktorisky.png", name: "doktoriskiy" },
-    { imgSrc: "./images/egerisky.png", name: "egerisky" },
+    { imgSrc: "./images/aristokrat.jpg", name: "aristokrat" },
+    { imgSrc: "./images/barbekyu.jpg", name: "barbekyu" },
+    { imgSrc: "./images/doktorisky.jpg", name: "doktoriskiy" },
+    { imgSrc: "./images/egerisky.jpg", name: "egerisky" },
     { imgSrc: "./images/flag.jpg", name: "flag" },
-    { imgSrc: "./images/myasa.png", name: "myasa" },
-    { imgSrc: "./images/tushonka.png", name: "tushonka" },
-    { imgSrc: "./images/vintaj.png", name: "vintaj" },
-    { imgSrc: "./images/aristokrat.png", name: "aristokrat" },
-    { imgSrc: "./images/barbekyu.png", name: "barbekyu" },
-    { imgSrc: "./images/doktorisky.png", name: "doktoriskiy" },
-    { imgSrc: "./images/egerisky.png", name: "egerisky" },
+    { imgSrc: "./images/myasa.jpg", name: "myasa" },
+    { imgSrc: "./images/tushonka.jpg", name: "tushonka" },
+    { imgSrc: "./images/vintaj.jpg", name: "vintaj" },
+    { imgSrc: "./images/aristokrat.jpg", name: "aristokrat" },
+    { imgSrc: "./images/barbekyu.jpg", name: "barbekyu" },
+    { imgSrc: "./images/doktorisky.jpg", name: "doktoriskiy" },
+    { imgSrc: "./images/egerisky.jpg", name: "egerisky" },
     { imgSrc: "./images/flag.jpg", name: "flag" },
-    { imgSrc: "./images/myasa.png", name: "myasa" },
-    { imgSrc: "./images/tushonka.png", name: "tushonka" },
-    { imgSrc: "./images/vintaj.png", name: "vintaj" },
+    { imgSrc: "./images/myasa.jpg", name: "myasa" },
+    { imgSrc: "./images/tushonka.jpg", name: "tushonka" },
+    { imgSrc: "./images/vintaj.jpg", name: "vintaj" },
 ];
 
 const randomize = () => {
@@ -84,7 +84,7 @@ const checkCards = (e) => {
             playerLives--;
             playerLivesCount.textContent = playerLives;
             if (playerLives === 0) {
-                restart("TRY AGAIN 🥲");
+                restart("Yutqazdingiz :( qayta urunib ko'ring");
             }
         }
     }
@@ -113,10 +113,5 @@ const restart = (text) => {
     playerLivesCount.textContent = playerLives
     setTimeout(() => window.alert(text), 100)
 }
-
-
-
-
-
 
 cardGenerator()
